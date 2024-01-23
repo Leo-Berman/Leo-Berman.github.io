@@ -43,6 +43,7 @@ body{
 }
 
 .homegrid-item{
+    color:#f2f2f2;
     place-self: center;
     object-fit: contain;
     max-height: 100%;
