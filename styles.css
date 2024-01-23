@@ -48,3 +48,22 @@ body{
     object-fit: contain;
     max-height: 100%;
 }
+
+.aboutgrid{
+    margin-top:20vh;
+    margin-right:20vw;
+    margin-left:20vw;
+    display: grid;
+    place-items: center;
+    border:2px solid #04AA6D;
+    width:60vw;
+    grid-template-columns: 60vw;
+    grid-template-rows: 50vh;
+}
+
+.aboutgrid-item{
+    color:#f2f2f2;
+    place-self: center;
+    object-fit: contain;
+    max-height: 100%;
+}
