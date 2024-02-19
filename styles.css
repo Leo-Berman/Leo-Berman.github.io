@@ -15,7 +15,7 @@ body{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 3vh;
 }
 
 /* Change the color of links on hover */
@@ -52,12 +52,10 @@ body{
 
 .aboutgrid{
     margin-top:30vh;
-    margin-right:20vw;
-    margin-left:20vw;
     display: grid;
     place-items: center;
-    width:32vw;
-    grid-template-columns: 60vw;
+    width:100vw;
+    grid-template-columns: 100vw;
     grid-template-rows: 40vh;
 }
 
@@ -66,15 +64,18 @@ body{
     object-fit: contain;
     max-height: 100%;
     font-family:Arial;
-    font-size:20pt;
+    font-size:3vh;
 }
 h1{
     font-family:Arial;
 }
 h3{
     font-family:Arial;
-    font-size:20pt;
+    font-size:3vh;
 }
 a[href]{
     color:#5e8dd3;
+}
+li{
+    font-size:3vh;
 }
