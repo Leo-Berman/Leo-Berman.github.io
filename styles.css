@@ -35,10 +35,11 @@ body{
     margin-right:20vw;
     margin-left:20vw;
     display: grid;
-    place-items: center;
+    place-items: center;    
     width:60vw;
     grid-template-columns: 30vw 30vw;
     grid-template-rows: 50vh;
+    
 }
 
 .homegrid-item{
@@ -46,18 +47,18 @@ body{
     place-self: center;
     object-fit: contain;
     max-height: 100%;
+    
 }
 
 .aboutgrid{
-    margin-top:20vh;
-    margin-right:20vw;
-    margin-left:20vw;
+    margin-top:30vh;
+    margin-right:34vw;
+    margin-left:34vw;
     display: grid;
     place-items: center;
-    border:2px solid #04AA6D;
-    width:60vw;
-    grid-template-columns: 60vw;
-    grid-template-rows: 50vh;
+    width:32vw;
+    grid-template-columns: 32vw;
+    grid-template-rows: 11vh;
 }
 
 .aboutgrid-item{
@@ -65,4 +66,16 @@ body{
     place-self: center;
     object-fit: contain;
     max-height: 100%;
+    font-family:Arial;
+    font-size:20pt;
+}
+h1{
+    font-family:Arial;
+}
+h3{
+    font-family:Arial;
+    font-size:20pt;
+}
+a[href]{
+    color:#5e8dd3;
 }
