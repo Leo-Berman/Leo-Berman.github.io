@@ -36,7 +36,6 @@ body{
     margin-left:20vw;
     display: grid;
     place-items: center;
-    border:2px solid #04AA6D;
     width:60vw;
     grid-template-columns: 30vw 30vw;
     grid-template-rows: 50vh;
