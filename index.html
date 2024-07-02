@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href='styles.css' rel='stylesheet'>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='indexstyles.css' rel='stylesheet'>
+    <link href='styles.css' rel='stylesheet'>
+    <link href='dropdown.css' rel='stylesheet'>
+
+    
+  </head>
   <body>
     <div class="topnav">
-      <a class="active" href="index.html">Home</a>
       <a class="active" href="projects.html">Projects</a>
-      <a class="active" href="resume.html">Resume</a>
-      <a class="active" href="contact.html">Contact Me</a >
-      <a class="active" href="certifications.html">Certifications</a >
+      <a class="active" href="blog.html">Blog</a >
+      <a class="active" href="qualifications.html">Qualifications</a >
+      <a class="active" href="about.html">Contact</a>
     </div>
 
-    <div class = "homegrid">
-      <div class = "homegrid-item" style = "margin-left:20vw;font-family:Arial; font-size: 2vh;">
-        <div style = "font-size:20pt; text-align: center;color:#04AA6D">Computer Engineer<br>Temple
-	  University</div>
-<div style = "width: 300px;">	
-	<br><br>Hi! I'm Leo and I was always interested in technology. Whether it was video games or making cool things, I loved it. From tables to treadmills, it's always been something I wanted to pursue. <br><br> I'd love if you explored my projects and qualifications.
-	<br><br>-Leo
-	</div>
-     </div>
-     <div class = "homegrid-item">
-      <img src="media/Smaller_Edited.png" class = "homegrid-item" style = "margin-right:20vw;max-width:25vw; border-radius:200px"></img>
+    <div id="main">
+
+      
+      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="font-size:40pt;background-color:#4d4d4d;display:none" id="mySidebar">
+	<button style="border-style:none;background-color:#4d4d4d;" onclick="w3_close()"><p style="font-size:40pt;">Close</p></button>
+	<a href="#" class="w3-bar-item w3-button">Link 1</a>
+	<a href="#" class="w3-bar-item w3-button">Link 2</a>
+	<a href="#" class="w3-bar-item w3-button">Link 3</a>
+      </div>
+      
+      <div>
+	<button style="float: left;height:100vh;width:10vw;background-color:#4d4d4d" id="openNav" onclick="w3_open()"><p style="color:white;font-size:40pt;font-weight:bold;transform: scale(2,3)">></p></button>
+      </div>
+
+      <div style="width:70vw;margin:5vw;color:white;word-wrap:break-word;float:left;">
+	<h1>Mission Statement</h1>
+	<p></p>
+      </div>
     </div>
-    </div>
+    
+    <script>
+      function w3_open() {
+	  document.getElementById("main").style.marginLeft = "0";
+	  document.getElementById("mySidebar").style.width = "80%";
+	  document.getElementById("mySidebar").style.display = "block";
+	  document.getElementById("openNav").style.display = 'none';
+      }
+      function w3_close() {
+	  document.getElementById("main").style.marginLeft = "0%";
+	  document.getElementById("mySidebar").style.display = "none";
+	  document.getElementById("openNav").style.display = "inline-block";
+      }
+    </script>
   </body>
+</html>

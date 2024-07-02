@@ -1,34 +1,10 @@
 /* Add a black background color to the top navigation */
 body{
-  overflow:hidden;
-    background-color: rgb(31, 30, 30);
-}
-.topnav {
-    background-color: rgb(59, 59, 59);
-    overflow: hidden;
+    background-color: #1a1a1a;
+    padding: 0;
+    margin: 0;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 3vh;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-  
-  /* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
 
 .homegrid{
     margin-top:20vh;
@@ -63,14 +39,15 @@ body{
     color:#f2f2f2;  
     object-fit: contain;
     max-height: 100%;
-    font-family:Arial;
+    font-family:monaco, monospace;
     font-size:3vh;
 }
 h1{
-    font-family:Arial;
+    font-size:30pt;
+    font-family:monaco, monospace;
 }
 h3{
-    font-family:Arial;
+    font-family:monaco, monospace;
     font-size:3vh;
 }
 a[href]{
@@ -78,4 +55,9 @@ a[href]{
 }
 li{
     font-size:3vh;
+}
+
+p{
+    font-family:monaco, monospace;
+    font-size:23pt;
 }
