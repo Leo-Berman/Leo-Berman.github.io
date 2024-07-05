@@ -5,7 +5,7 @@
     <link href='indexstyles.css' rel='stylesheet'>
     <link href='styles.css' rel='stylesheet'>
     <link href='dropdown.css' rel='stylesheet'>
-
+    
     
   </head>
   <body style="display:flex;flex-direction:column;overflow:hidden;height:100vh;">
@@ -15,25 +15,32 @@
       <a class="active" href="qualifications.html">Qualifications</a >
       <a class="active" href="contact.html">Contact</a>
     </div>
+    
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:0%;font-size:40pt;display:none;background-color:#1a1a1a;" id="mySidebar">
+	
+	<div style="display:flex;flex-direction:row;width:100%;">
+	  <div style="width:80%;background-color:#4d4d4d;">
+	    <a href="projects.html" class="w3-bar-item" style="border-style:solid;border-width:10px;border-color:white;"><h1>How I got my cloud certificate</h1><img style="max-width:100%" src="media/aws-certified-cloud-practitioner.png"></a>
+	    <a href="#" class="w3-bar-item" style="border-style:solid;border-width:10px;border-color:white;"><h1>Upcycling a treadmill into a low profile walk pad</h1><img style="max-width:100%" src="media/treadmillmoment.png"></a>
+	    <a href="#" class="w3-bar-item" style="border-style:solid;border-width:10px;border-color:white;"><h1>Building a website for my small business</h1><img style="max-width:100%" src="media/herbivore.png"></a>
+	    <a href="#" class="w3-bar-item" style="border-style:solid;border-width:10px;border-color:white;"><h1></h1><img style="max-width:100%" src="media/aws-certified-cloud-practitioner.png"></a>
+
+	    <button class="w3-bar-item" onclick="w3_close()" style="text-align:center;background-color:#4d4d4d;"><h1 style="background-color:#4d4d4d;">Close</h1></button>
+	  </div>
+
+	  <div style="width:20%;">
+	    <button style="position:relative;border-style:none;width:100%;height:100%;background-color:#1a1a1a;border-style:none;" onclick="w3_close()"></button>
+	    </div>
+	</div>
+      </div>
 
     
-         <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:0;font-size:40pt;background-color:#4d4d4d;display:none" id="mySidebar">
-
-
-	    <a href="#" class="w3-bar-item w3-button"><h1>Link 1</h1><img src="media/aws-certified-cloud-practitioner.png"></a>
-	    <a href="#" class="w3-bar-item w3-button"><h1>Link 1</h1><img src="media/aws-certified-cloud-practitioner.png"></a>
-	    <a href="#" class="w3-bar-item w3-button"><h1>Link 1</h1><img src="media/aws-certified-cloud-practitioner.png"></a>
-	     <button style="position:relative;border-style:none;background-color:#4d4d4d;" onclick="w3_close()"><p style="font-size:40pt;">Close</p></button>
-
-	     
-	 </div>
-
-	 
     
     <div id="main" style="display:flex;flex-direction:row;height:100%;">
-
-	<button style="width:10vw;background-color:#4d4d4d;color:white;font-size:60pt;font-weight:bold;" id="openNav" onclick="w3_open()">&#10095;</button>
-
+      
+      <button style="width:10vw;background-color:#4d4d4d;color:white;font-size:60pt;font-weight:bold;" id="openNav" onclick="w3_open()">&#10095;</button>
+      
       <div style="height:100%;width:70vw;margin:5vw;color:white;word-wrap:break-word;float:left;">
 	<h1>Mission Statement</h1>
 	<p></p>
@@ -44,10 +51,11 @@
     <script>
       function w3_open() {
 	  document.getElementById("main").style.marginLeft = "0";
-	  document.getElementById("mySidebar").style.width = "80%";
+	  document.getElementById("mySidebar").style.width = "100%";
 	  document.getElementById("mySidebar").style.display = "block";
 	  document.getElementById("mySidebar").style.overflow = "scroll";
 	  document.getElementById("openNav").style.display = 'none';
+	  document.getElementById("parentmenu").style.display = 'flex';
       }
       function w3_close() {
 	  document.getElementById("main").style.marginLeft = "0%";
