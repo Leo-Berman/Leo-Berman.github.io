@@ -1,0 +1,35 @@
+.my-sidebar{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+}
+
+.my-sidebar-content{
+    width:80%;
+    background-color:#4d4d4d;
+}
+
+.my-sidebar-close {
+    text-align:center;
+    background-color:#4d4d4d;
+    border-style:solid !important;
+    border-width:10px !important;
+    border-color:white !important;
+}
+
+.my-sidebar-side-close {
+    position:relative;
+    border-style:none;
+    width:100%;
+    height:100%;
+    background-color:#1a1a1a;
+    border-style:none;
+}
+
+.my-sidebar-open {
+    width:10vw;
+    background-color:#4d4d4d;
+    color:white;
+    font-size:60pt;
+    font-weight:bold;
+}

@@ -16,12 +16,6 @@
     margin-bottom: 0px;
     font-family: monaco, monospace;
 }
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: #6d7d71;
-}
   
   /* Add a color to the active/current link */
 .topnav a.active {
