@@ -10,3 +10,6 @@
     color:white;
     font-size:25pt;
 }
+li{
+    word-wrap: break-word;
+}
