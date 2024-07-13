@@ -77,7 +77,13 @@
 	  document.getElementById("mySidebar").style.display = "block";
 	  document.getElementById("mySidebar").style.overflow = "scroll";
 	  document.getElementById("openNav").style.display = 'none';
-	  document.getElementById("parentmenu").style.display = 'flex';
+	  
+	  let vw = window.innerWidth;
+	  let vh = window.innerHeight;
+	  console.log(vw);
+	  if (vw >= 800) {
+	      document.getElementById("mySidebar").style.width = "50%";
+	  }
       }
       function w3_close() {
 	  document.getElementById("main").style.marginLeft = "0%";

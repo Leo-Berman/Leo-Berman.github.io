@@ -24,6 +24,7 @@
     height:100%;
     background-color:#1a1a1a;
     border-style:none;
+    opacity: 0;
 }
 
 .my-sidebar-open {
@@ -32,4 +33,16 @@
     color:white;
     font-size:60pt;
     font-weight:bold;
+}
+
+@media (min-width: 800px) {
+    .my-sidebar-open {
+	width:5vw;
+	background-color:#4d4d4d;
+	color:white;
+	font-size:35pt;
+	font-weight:bold;
+    }
+
+
 }
