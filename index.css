@@ -35,7 +35,7 @@
     font-weight:bold;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 480px) {
     .my-sidebar-open {
 	width:5vw;
 	background-color:#4d4d4d;
@@ -43,6 +43,5 @@
 	font-size:35pt;
 	font-weight:bold;
     }
-
 
 }
