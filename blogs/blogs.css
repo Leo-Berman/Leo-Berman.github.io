@@ -13,3 +13,16 @@
 li{
     word-wrap: break-word;
 }
+
+@media screen and (min-width: 1100px){
+    .blogtitle{
+	font-size:20pt;
+    }
+
+    .blogheader {
+	font-size:15pt;
+    }
+    .blogbody{
+	font-size:12.5pt;
+    }
+}
