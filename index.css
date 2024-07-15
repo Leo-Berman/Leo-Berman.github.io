@@ -1,20 +1,54 @@
+
+h1 {
+    font-size: 3vh;
+}
+p {
+    font-size: 1.75vh;
+}
+h3 {
+    font-size: 2vh !important;
+}
+
+
+.w3-sidebar {
+    width: 0%;
+    font-size: 20pt !important;
+    display: none;
+    background-color:transparent !important;
+}
+
 .my-sidebar{
     display:flex;
     flex-direction:row;
     width:100%;
+    background-color:transparent;
+    overflow:hidden;
 }
 
 .my-sidebar-content{
     width:80%;
     background-color:#4d4d4d;
+    border-style:solid;
+    border-color:white;
+    display: flex;
+    flex-direction: column;
+}
+
+.w3-bar-item {
+    height: 25%;
+    
+}
+
+.content-img {
+    max-width:100%;
+    max-height:65%;
+
 }
 
 .my-sidebar-close {
     text-align:center;
-    background-color:#4d4d4d;
-    border-style:solid !important;
-    border-width:10px !important;
-    border-color:white !important;
+    background-color:transparent;
+    height:10%;
 }
 
 .my-sidebar-side-close {
@@ -22,26 +56,38 @@
     border-style:none;
     width:100%;
     height:100%;
-    background-color:#1a1a1a;
+    background-color:transparent;
     border-style:none;
-    opacity: 0;
 }
 
 .my-sidebar-open {
     width:10vw;
     background-color:#4d4d4d;
     color:white;
-    font-size:60pt;
-    font-weight:bold;
+    font-size:10vw;
+    font-weight:bold
+;
 }
 
-@media (min-width: 480px) {
+.mepicture {
+    max-width:25%;
+    border-radius:200px;
+}
+@media screen and (min-width: 1100px) {
     .my-sidebar-open {
 	width:5vw;
 	background-color:#4d4d4d;
 	color:white;
-	font-size:35pt;
+	font-size:25pt;
 	font-weight:bold;
     }
-
+    .mepicture {
+	max-width:10%;
+    }
+    h1 {
+	font-size: 4.5vh;
+    }
+    p {
+	font-size: 3vh;
+    }
 }
