@@ -11,20 +11,19 @@
   <body style="display:flex;flex-direction:column;overflow:scroll;height:100vh;">
     <div class="topnav">
       <a class="active" href="../index.html">Home</a >
-      <a style="color: #4d4d4d; background-color: white;" class="active" href="../blog.html">Projects</a >
-
+      <a class="active" href="../blog.html">Projects</a>
+      <a class="active" href="../qualifications.html">Qualifications</a >
       <a class="active" href="../contact.html">Contact</a>
-      <a class="active" href="../resume.html">Resume</a>
-      <a class="active" href="../certifications.html">Certs.</a>
+
     </div>
     <div style="margin-right:10vw;margin-left:10vw;">
       <center>
 	<hr>
-	<p class="blogtitle" >Why I Upcycle (And why you should too!) </p>
+	<p class="blogtitle" >Coding For Fun?!?!?!?</p>
 	<p class="blogheader" >Leo Berman</p>
 	<hr>
       </center>
-      <p class="blogheader">This blog is yet to be added but while you're waiting you can check out the GitHub and writeup for the above treadmill DIY project.  <a href="https://github.com/Leo-Berman/Treadmill-To-Walking-Pad">GitHub</a> </p>
+      <p class="blogheader">This blog hasn't been written yet, but you can check the repo out here! <a href="https://github.com/Leo-Berman/Tetris">GitHub</a> </p>
     </div>
   </body>
 </html>
