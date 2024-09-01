@@ -73,6 +73,10 @@ h3 {
     max-width:25%;
     border-radius:200px;
 }
+.mySidebar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 @media screen and (min-width: 1100px) {
     .my-sidebar-open {
 	width:5vw;
