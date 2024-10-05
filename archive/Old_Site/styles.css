@@ -1,0 +1,47 @@
+/* Add a black background color to the top navigation */
+body{
+    background-color: #1a1a1a;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+}
+
+.aboutgrid{
+    margin-top:30vh;
+    display: grid;
+    place-items: center;
+    width:100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 40vh;
+}
+
+.aboutgrid-item{
+    color:#f2f2f2;  
+    object-fit: contain;
+    max-height: 100%;
+    font-family:monaco, monospace;
+    font-size:3vh;
+}
+
+h1{
+    font-family:monaco, monospace;
+    color:white;
+}
+h2{
+    font-family:monaco, monospace;
+    color:white;
+}
+h3{
+    font-family:monaco, monospace;
+    color:white;
+}
+p{
+    font-family:monaco, monospace;
+    color:white;
+}
+
+a[href]{
+    color:#5e8dd3;
+}

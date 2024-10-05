@@ -1,47 +1,534 @@
-/* Add a black background color to the top navigation */
-body{
-    background-color: #1a1a1a;
-    padding: 0;
+* {
+    box-sizing: border-box;
     margin: 0;
-    display:flex;
-    flex-direction:column;
-    height:100vh;
+    padding: 0;
 }
 
-.aboutgrid{
-    margin-top:30vh;
-    display: grid;
-    place-items: center;
-    width:100vw;
-    grid-template-columns: 100vw;
-    grid-template-rows: 40vh;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    animation: gradient 10s ease infinite;
+    background: linear-gradient(45deg, #241f31, black, black, black);
+    background-size: 400% 400%;
 }
 
-.aboutgrid-item{
-    color:#f2f2f2;  
-    object-fit: contain;
-    max-height: 100%;
-    font-family:monaco, monospace;
-    font-size:3vh;
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-h1{
-    font-family:monaco, monospace;
-    color:white;
-}
-h2{
-    font-family:monaco, monospace;
-    color:white;
-}
-h3{
-    font-family:monaco, monospace;
-    color:white;
-}
-p{
-    font-family:monaco, monospace;
-    color:white;
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
-a[href]{
-    color:#5e8dd3;
+.ribbon {
+    background: grey;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.ribbon h1 {
+    color: white; /* Base color */
+    font-family: 'Roboto', sans-serif; /* Stylish font */
+    font-size: 3rem; /* Larger size for emphasis */
+    background: linear-gradient(90deg, black, black); /* Gradient color */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make the fill transparent */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin: 0; /* Remove default margin */
+    opacity: 0; /* Start invisible */
+    transform: translateY(-30px); /* Start above */
+    animation: slideIn 1s forwards; /* Apply animation */
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide to original position */
+    }
+}
+
+main {
+    padding: 0; /* Remove padding for full cover */
+    margin: 0 20rem;
+    background: grey;
+    height: calc(100vh - 170px);*;
+    overflow: auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+    padding: 1rem 0; /* Padding around the button area */
+}
+
+.section-button {
+    display: block;
+    width: 200px; /* Button width */
+    height: 50px; /* Button height */
+    background: black; /* Base color */
+    color: white; /* Text color */
+    text-align: center;
+    line-height: 50px; /* Center text vertically */
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    position: relative;
+    z-index: 2; /* Ensure buttons are above the content */
+    overflow: hidden; /* Hide overflow for effect */
+    font-family: 'Roboto', sans-serif; /* Apply nicer font */
+    font-weight: 700; /* Bold text */
+    letter-spacing: 1px; /* Spacing for clarity */
+}
+
+.section-button:hover {
+    background: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Adding a ripple effect */
+.section-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Size of ripple */
+    height: 300%; /* Size of ripple */
+    background: rgba(255, 255, 255, 0.4); /* Ripple color */
+    border-radius: 50%; /* Circle */
+    transform: translate(-50%, -50%) scale(0); /* Start scale at 0 */
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition for ripple */
+    opacity: 0; /* Start invisible */
+}
+
+.section-button:hover::after {
+    transform: translate(-50%, -50%) scale(1); /* Scale to full size */
+    opacity: 1; /* Make it visible */
+}
+
+
+.content {
+    position: relative;
+    height: calc(100% - 70px); /* Adjust height to fit below buttons */
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 1); /* Full opacity */
+    border-radius: 10px;
+    padding: 2rem;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1; /* Behind the buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align to the top */
+    text-align: left; /* Left align text */
+    margin: 20px; /* Add margin around the popup */
+}
+
+.hover-content.active {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Show when active */
+}
+
+.about-container {
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between; 
+    width: 100%; 
+    margin-top: 20px; 
+}
+
+.about-text {
+    flex: 1; 
+    margin-right: 40px; /* Increased space between text and image */
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    color: #444; 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    max-height: 300px; 
+    overflow: auto; 
+}
+
+.about-image {
+    position: relative; 
+    flex-shrink: 0; 
+    width: 250px; 
+    margin-left: 20px; /* Optional: Add margin on the left side of the image */
+}
+
+.about-image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+.circle-overlay {
+    position: absolute; /* Position absolute over the image */
+    top: 160px;
+    left: 20px;
+    width: 125px; /* Match the image width */
+    height: 125px; /* Match the image height */
+    pointer-events: none; /* Prevent interaction with the overlay */
+    stroke: yellow; /* Color of the circle */
+    stroke-width: 5; /* Thickness of the circle */
+    fill: none; /* No fill for the circle */
+    opacity: 1; /* Ensure visibility during animation */
+}
+
+.draw-circle {
+    animation: draw-circle 1s forwards; /* Duration set to 2 seconds */
+}
+
+@keyframes draw-circle {
+    0% {
+        stroke-dasharray: 0, 565; /* Hide the circle */
+        opacity: 1; /* Fully visible during animation */
+    }
+    100% {
+        stroke-dasharray: 565, 0; /* Complete the circle */
+        opacity: 1; /* Stay visible after animation */
+    }
+}
+
+.arrow-overlay {
+    position: absolute;
+    top: 235px; /* Adjust this for vertical positioning */
+    left: 10%; /* Adjust this for horizontal positioning */
+    width: 80px; /* You can adjust the size of the SVG if needed */
+    height: 150px; /* You can adjust the height of the SVG if needed */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.draw-circle + .arrow-overlay {
+    opacity: 1; /* Show arrow when circle is drawn */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    font-weight: 700; /* Bold text */
+    margin: -20px 0 20px 0; /* Margin below the heading */
+}
+
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 10px;
+}
+
+.github {
+    background-image: url('./media/Github.png');
+    background-size: cover;
+}
+
+.linkedin {
+    background-image: url('./media/LinkedIn.png');
+    background-size: cover;
+}
+
+.circle:hover {
+    opacity: 0.8;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    main {
+        margin: 0;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-button {
+        width: 100%; /* Full width on mobile */
+        margin: 1rem 0;
+    }
+
+    .hover-content {
+        padding: 1rem;
+    }
+}
+
+.default-content {
+    /* Optional: Add styles for the default content */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-text {
+    font-family: 'Montserrat', sans-serif; /* Or your chosen font */
+    font-size: 24px; /* Adjusted size */
+    font-weight: bold; /* Keep bold for emphasis */
+}
+
+.content {
+    position: relative;
+    height: auto; /* Allow height to expand automatically */
+    padding-bottom: 20px; /* Add some padding below for spacing */
+}
+
+.project {
+    display: flex; /* Use flexbox for layout */
+    background: rgba(255, 255, 255, 0.95); /* Light background for the project section */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the project box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 800px; /* Limit the width of the project box */
+    margin: 20px auto; /* Center the project box */
+    flex-wrap: wrap; /* Allow wrapping of content */
+}
+
+.project-image {
+    flex: 1; /* Allow the image to take some space */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.project-image img {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Make the image responsive */
+    border-radius: 10px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.project-details {
+    flex: 2; /* Allow details to take more space */
+    text-align: left; /* Align text to the left */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width:70%;
+    margin: auto; /* Center it */
+}
+
+.mySlides {
+    display: none; /* Hide all slides by default */
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity .5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.mySlides.active {
+    display: block; /* Show the active slide */
+    opacity: 1; /* Fade in */
+}
+
+.mySlides.fade-out {
+    opacity: 0; /* Fade out */
+}
+
+
+img {
+    border-radius: 10px; /* Optional: add border radius to images */
+    max-height:100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+.caption {
+    text-align: center; /* Center the caption text */
+    margin-top: 10px; /* Space above the caption */
+    color: white; /* Caption text color */
+    font-family: 'Roboto', sans-serif; /* Font for the caption */
+    font-size: 1.2rem; /* Font size for the caption */
+    transition: opacity 0.5s ease; /* Transition effect for the caption */
+    opacity: 0; /* Start with opacity 0 */
+}
+
+.mySlides.active .caption {
+    opacity: 1; /* Fade in the caption when the slide is active */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    /* Hide all hover content sections */
+    .hover-content {
+        display: none; /* Hide all hover content */
+    }
+
+    /* Show only the default content (slideshow) */
+    .default-content {
+        display: block; /* Ensure the default content is visible */
+        opacity: 1; /* Make it fully visible */
+        visibility: visible; /* Ensure it's visible */
+    }
+
+    /* Adjust button container to show on mobile */
+    .button-container {
+        display: flex; /* Maintain flex layout for buttons */
+        justify-content: center; /* Center buttons */
+        margin: 1rem 0; /* Add some margin */
+    }
+
+    .default-content h2 {
+        display: none; /* Hide the heading on mobile */
+	background-color: none;
+    }
+
+    .default-content .text-box {
+        display: none; /* Hide the text box on mobile */
+    }
+
+     .default-content h2{
+         display: none; /* Hide the heading on mobile */
+	 background-color:none;
+    }
+     
+    .default-content .about-box {
+        display: none; /* Hide the text box on mobile */
+    }
+
+    .prev, .next {
+        display: none; /* Hide the arrows on mobile */
+    }
+
+    .mySlides, .slideshow-container, .img1, .im2, .img3 {
+	width:100%;
+	margin: 0;
+	padding:0;
+    }
+}
+
+.contact-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center text within the contact section */
+    margin: 20px auto; /* Center the section */
+    max-width: 600px; /* Limit max width */
+}
+
+.contact-container {
+    background: #f8f9fa; /* Light background for the boxes */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0; /* Margin between boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.contact-container:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 10px; /* Space between text and link */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker shade on hover */
+}
+
+h2 {
+    color: #333; /* Heading color */
+    margin-bottom: 1rem; /* Space below the heading */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+
+.pdf-container {
+    background: grey; /* Background color to match your site */
+    height: calc(100vh - 170px); /* Adjust height to fit */
+    padding: 20px; /* Optional padding */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
+}
+.return-button {
+    display: inline-block;
+    padding: 10px 20px; /* Padding for the button */
+    background: black; /* Base color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    border-radius: 25px; /* Rounded corners */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.return-button:hover {
+    background: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='styles.css' rel='stylesheet'>
+    <link href='topnav.css' rel='stylesheet'>
+    <link href='index.css' rel='stylesheet'>
+  </head>
+  <body style="overflow:hidden;">
+    <div class="topnav">
+      <a style="color: #4d4d4d; background-color: white;" class="active" href="index.html">Home</a >
+      <a class="active" href="blog.html">Projects</a >
+      <a class="active" href="contact.html">Contact</a>
+      <a class="active" href="resume.html">Resume</a>
+      <a class="active" href="certifications.html">Certs.</a>
+    </div>
+    
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+	
+      <div class="my-sidebar">
+	
+	<div class="my-sidebar-content" id="my-sidebar-content">
+
+	  <a href="blogs/blog_001_AWSCert.html" class="w3-bar-item">
+	    <h3>How I got my cloud certificate</h3>
+	    <img class="content-img" src="media/aws-certified-cloud-practitioner.png"></img>
+	  </a>
+	  
+	  <a href="blogs/blog_002_WhyUpcycle.html" class="w3-bar-item">
+	    <h3>Upcycling a treadmill into a low profile walk pad</h3>
+	    <img class="content-img" src="media/treadmillmoment.png"></img>
+	  </a>
+	  
+	  <a href="blogs/blog_003_CodingForFun.html" class="w3-bar-item">
+	    <h3>Coding... for fun!?!?!</h3>
+	    <img class="content-img" src="media/tetris.png"></img>
+	  </a>
+	 
+	</div>
+	
+	<div style="width:20%;">
+	 <div class="my-sidebar-side-close" onclick="w3_close()"></div>
+	</div>
+	
+      </div>
+      
+    </div>
+<div style="display:flex;flex-direction:column;height:100%;">    
+    
+    
+    <div id="main" style="display:flex;flex-direction:row;height:100%;">
+      
+      <button class="my-sidebar-open" id="openNav" onclick="w3_open()">&#10095;</button>
+      
+      <div style="height:100%;width:70vw;margin:5vw;color:white;word-wrap:break-word;float:left;">
+	<h1>Mission Statement</h1>
+	<p>The state of technology is promising, yet poses concerns. There are more opportunities for innovation than ever before. As usual, with great power comes great responsibility. People are becoming increasingly dependent on unreliable tech. Technology has become wasteful, hard to maintain, and tech companies lack transparent practices. My goal is to use tech to simplify life, without complicating it.</p>
+	<center>
+         <!--  <img src="media/MePicture.jpg" class="mepicture"> -->
+	  </center>
+	</div>
+    </div>
+
+</div>
+    <script>
+      function w3_open() {
+	  document.getElementById("main").style.marginLeft = "0";
+	  document.getElementById("mySidebar").style.width = "100%";
+	  document.getElementById("mySidebar").style.display = "flex";
+	  document.getElementById("mySidebar").style.overflow = "scroll";
+	  document.getElementById("openNav").style.display = 'none';
+	  
+	  let vw = window.innerWidth;
+	  let vh = window.innerHeight;
+	  console.log(vw);
+	  if (vw >= 1200) {
+	      document.getElementById("my-sidebar-content").style.width = "50%";
+	  }
+      }
+      
+      function w3_close() {
+	  document.getElementById("main").style.marginLeft = "0%";
+	  document.getElementById("mySidebar").style.display = "none";
+	  document.getElementById("openNav").style.display = "inline-block";
+	  document.getElementById("mySidebar").style.overflow = "hidden";
+      }
+    </script>
+    
+  </body>
+
+</html>
