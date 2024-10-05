@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  </head>
+  <body>
+    <header>
+
+      <div class="ribbon">
+	<a href="index.html" class="return-button">Home</a>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/Treadmill.jpg" alt="Finished Walkpad" />
+        </div>
+        <div class="project-details">
+          <h3>Upcycling a Treadmill to a Web Controlled Walk Pad</h3>
+          <p><strong>Description:</strong> In this project, we (myself and one friend) took an old treadmill that would've gone to waste, removed the control panel, and programmed an Arduino to supplement the missing control panel. Finally, we utilized Flask to create a web interface that could send serial writes to the Arduino and hosted the site on a Raspberry Pi.  </p>
+          <p><strong>Technologies Used:</strong> Arduino IDE, Python (Flask), Bash, GitHub </p>
+          <a href="https://github.com/Leo-Berman/Treadmill-To-Walking-Pad/tree/main" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/Tetris.png" alt="Project Image 2" />
+        </div>
+        <div class="project-details">
+          <h3>CLI Tetris</h3>
+          <p><strong>Description:</strong> This was an experiment to see how I could code Tetris from scratch without any tutorials or reference code for how to code tetris. I ended up using both SDL and ncurses to create a terminal based tetris.</p>
+          <p><strong>Technologies Used:</strong> C++, GDB, SDL, ncurses</p>
+          <a href="https://github.com/Leo-Berman/Tetris/tree/main" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/TextEditor.png" alt="Project Image 2" />
+        </div>
+        <div class="project-details">
+          <h3>Personalized  Open Source CLI Text Editor</h3>
+          <p><strong>Description:</strong> I like simplicity in my text editor. I'm used to the keybinds in Emacs, but I used to not know that I could or how to configure my own emacs environment. Long story short, I'm back to Emacs, but it was a valuable learning experience. </p>
+          <p><strong>Technologies Used:</strong> C, GDB</p>
+          <a href="https://github.com/Leo-Berman/text-editor" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/BreastCancer.png" alt="Project Image 2" />
+        </div>
+        <div class="project-details">
+          <h3>Machine Learning Breast Pathology Diagnosis System</h3>
+          <p><strong>Description:</strong> For my senior design project, I worked with a team of computer engineers, machine learning specialists, cloud computing specialists, and digital pathology experts(<a href="https://isip.piconepress.com/projects/nedc/html/tuh_dpath/" target="_blank" class="project-link">TUHD</a>) to create a novel machine learning system that takes a frame-level diagnosis approach.</p>
+          <p><strong>Technologies Used:</strong> Python3, SKLearn, PyTorch, Shapely, Pandas</p>
+          <a href="https://github.com/Leo-Berman/Machine-Learning-Applications-In-Digital-Pathology" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/Pyppeteer.png" alt="Project Image 2" />
+        </div>
+        <div class="project-details">
+          <h3>SEC Webscraping Application</h3>
+          <p><strong>Description:</strong> While working in Dr. Samuel Rosen's research lab, I developed a novel approach to extract Schedule Of Investment (SOI) tables from 20+ years of filings with minimal post processing. This reduced deliverable time to a quarter of what it previously was (24+ hours to under 6).</p>
+          <p><strong>Technologies Used:</strong> Python3, Pandas, Pyppeteer, BeautifulSoup</p>
+          <a href="https://github.com/Leo-Berman/sec-webscraping" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/Rockwell.jpeg" alt="Project Image 2" />
+        </div>
+        <div class="project-details">
+          <h3>Rockwell PLC Studio5000 Design Suite</h3>
+          <p><strong>Description:</strong> Rockwell PLC programs can be saved as a L5k file which is essentially a readable text version of what has been developed in ladder logic using the GUI. This is useful for making mass code changes that would be repetitive and error prone. During my internship with <a href="https://ezsoft-inc.com/" target="_blank" class="project-link">EZSoft</a>. I develeoped a small suite of applications to parse L5k files and utilize RegEx to expedite, reduce error, and neaten rote tasks.</p>
+          <p><strong>Technologies Used:</strong> Python3, RegEx, Rockwell Studio5000/PLC</p>
+          <a href="https://github.com/Leo-Berman/sec-webscraping" target="_blank" class="project-link">In-Program Error Checking</a><br>
+	  <a href="https://github.com/Leo-Berman/sec-webscraping" target="_blank" class="project-link">Program Separator</a><br>
+	  <a href="https://github.com/Leo-Berman/sec-webscraping" target="_blank" class="project-link">I/O Verifier</a><br>
+	  <a href="https://github.com/Leo-Berman/sec-webscraping" target="_blank" class="project-link">Settings Initializer</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="./media/LightSensor.png" alt="Project Image 2" />
+        </div>
+        <div class="project-details">
+          <h3>Scalable Room Light Sensor Application</h3>
+          <p><strong>Description:</strong> I worked with a team of electrical and computer engineers to develop a Jinja based web application that receives requests from ESP32s holding light sensor information, utilizes a Flask backend for writes to a SQL database, and has a GUI to extract useful information for the end user. This app is modular and could handle as many ESP32s as the system hosting the site and database can handle. My primary role was working on the Flask backend as well as the Arduino code for the ESP32. </p>
+          <p><strong>Technologies Used:</strong> Arduino, Python, SQL, Jinja, Flask </p>
+          <a href="https://github.com/ECE3824-Spring2024/Room_Light_Sensor" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+      
+    </main>
+
+  </body>
+</html>
