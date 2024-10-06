@@ -532,3 +532,7 @@ h2 {
     transform: scale(1.05); /* Slightly increase size on hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
+
+.projimg {
+    object-fit: contain !important;
+}
