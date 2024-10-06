@@ -536,3 +536,7 @@ h2 {
 .projimg {
     object-fit: contain !important;
 }
+
+.img6 {
+    width:100%;
+}
